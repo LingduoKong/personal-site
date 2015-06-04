@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand " style="padding-left:200px" href="#person_info">Home</a>
+                <a class="navbar-brand " style="padding-left:50px" href="#News">News</a>
+                <a class="navbar-brand " style="padding-left:50px"href="#Projects">Projects</a>
+                <a class="navbar-brand " style="padding-left:50px"href="#Teaching">Teaching</a>
+                <a class="navbar-brand " style="padding-left:50px"href="#Publication">Publication</a>
+                <a class="navbar-brand " style="padding-left:50px"href="#Education">Education</a>
+                <a class="navbar-brand " style="padding-left:50px"href="#Software">Software Artifacts</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:100px">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-6 col-sm-3 sidebar" id="sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="">Project</a></li>
+                <li><a href="">Funding</a></li>
+                <li><a href="">Reasch</a></li>
+                <li><a href="">Collaborators</a></li>
+                <li><a href="">Publication</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-9">
+            <h2><strong>Vagabond</strong></h2>
+            <hr>
+            <img src="http://www.cs.iit.edu/~dbgroup/images/vagabondlogo.png" height="280" style="float:left; margin:20px">
+            <p>
+                The Vagabond system uses a novel holistic approach to help users to understand
+                and debug data exchange scenarios. Developing such a scenario
+                is a complex and labor-intensive process where errors are often only
+                revealed in the target instance produced as the result of this
+                process. This makes it very hard to debug such scenarios, especially for
+                non-power users. Vagabond aides a user in debugging by
+                automatically generating possible explanations for target instance
+                errors identified by the user.
+            </p>
+
+            <p>
+                For large schemata, the multi-step process of generating a schema mapping is error-prone. Often, errors become apparent only in the generated target instance. For example, a user may recognize that some attribute values in the target instance are incorrect. Tracing errors is time-consuming and complex, because of the many possible sources of errors: data, correspondences, schema mappings, or transformations. Previous work focused on aiding the user in debugging by (1) providing additional information, such as provenance, and better query language support for schema mappings (TRAMP, MXQL, Spider) or (2) through programming language style debugging like breakpoints (Spider).
+                These approaches have in common that they are more tailored for power users - they require the user to understand what possible sources of errors are and rely on her to guide the debugging process accordingly. In contrast to these approaches, Vagabond automatically generates and ranks explanations for errors in a data exchange setting based on user provided input about which parts of a generated target instance are erroneous. The rationale behind this approach is that (1) even inexperienced users are able to recognize instance errors, and (2) for both inexperienced and power users it is much harder to come up with explanations than to verify if a given explanation is correct.
+            </p>
+
+            <img src="http://www.cs.iit.edu/~dbgroup/images/vaga_screen.png" style="width: 100%;padding:20px">
+            <br>
+
+            <p>
+                The explanation generation of Vagabond builds on the facilities provided by TRAMP to generate and query data, various kinds of provenance, and mapping information. We consider data, correspondences, mappings, and transformations as potential causes of errors. For instance, a possible explanation for incorrect values in a target relation is that the source data where this information has been copied from is erroneous. Data provenance is used to identify this part of the source data. For each generated explanation we compute which mapping scenario elements and parts of the instance would be affected by the explanation (called the side-effects). The user can mark an explanation as correct. This will cause the side-effects of this explanation to be considered as additional errors, thus avoiding the need to mark all target instance errors to debug a data exchange scenario. To present more likely explanations first, we rank them on the number of side-effects they imply. The explanation generation is complemented with visualization of provenance and mapping information. Vagabond provides an easy-to-use GUI for navigating through this information.
+            </p>
+
+
+
+            <h2>Collaberator</h2>
+            <hr>
+            <ul>
+                <li><a href="http://people.inf.ethz.ch/alonso/">Gustavo Alonso</a> - Professor at ETH Zurich Systems Group</li>
+                <li><a href="http://www.cs.toronto.edu/%7Emiller/">Ren&eacute;e J. Miller</a> - Professor at the University of Toronto Database Group</li>
+                <li><a href="http://researcher.ibm.com/person/almaden-laura">Laura M. Haas</a> - IBM Fellow and Director, Institute for Massive Data, Analytics and Modeling</li>
+                <li><a href="http://www.cs.toronto.edu/%7Edu/">Jiang Du</a> - Ph.D. Student at the University of Toronto Database Group</li>
+            </ul>
+
+            <h2>Publications</h2>
+            <hr>
+
+            <table class="result" >
+                <tr><td><h4 style="background:yellow">2015</h4></td></tr>
+                <tr>
+                    <td>[3]</td>
+                    <td>
+                       <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/LW15.pdf">
+                        <span>Automatic Generation and Ranking of Explanations for Mapping Errors</span></a> <span class="bibauthor">(Seokki Lee, and Zhen Wang, Boris Glavic, Ren&eacute;e J. Miller)</span>,
+                        <span>Technical report, Illinois Institute of Technology, IIT/CS-DB-2015-01</span>, 2015.
+                        <span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=Automatic+Generation+and+Ranking+of+Explanations+for+Mapping+Errors&amp;rft.genre=report&amp;rft.pub=Illinois+Institute+of+Technology&amp;rft_id=http%3A%2F%2Fcs.iit.edu%2F%257edbgroup%2Fpdfpubls%2FLW15.pdf&amp;rfr_id=info%3Asid%2Fwww.cs.iit.edu%3A..%2Ffiles%2Fdbgroup.bib&amp;rft.date=2015&amp;rft.au=Seokki+Lee&amp;rft.au=and+Zhen+Wang&amp;rft.au=Boris+Glavic&amp;rft.au=Ren%26eacute%3Be+J.+Miller"></span>
+                        <a title="TR" href="http://cs.iit.edu/~dbgroup/php/bibtexbrowser.php?key=TR&amp;bib=..%2Ffiles%2Fdbgroup.bib">[bibtex]</a> <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/LW15.pdf">[pdf]</a></td>
+                    </tr>
+                    <tr><td><h4 style="background:yellow">2014</h4></td></tr>
+                    <tr>
+                        <td>[2]</td>
+                        <td>
+                           <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/Z14.pdf"><span>Efficient Scoring and Ranking of Explanation for Data Exchange Errors in Vagabond</span></a>
+                           <span class="bibauthor">(Zhen Wang)</span>, <span >Master's thesis, IIT</span>, 2014.
+                           <span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=Efficient+Scoring+and+Ranking+of+Explanation+for+Data+Exchange+Errors+in+Vagabond&amp;rft.genre=report&amp;rft.pub=IIT&amp;rft_id=http%3A%2F%2Fcs.iit.edu%2F%257edbgroup%2Fpdfpubls%2FZ14.pdf&amp;rfr_id=info%3Asid%2Fwww.cs.iit.edu%3A..%2Ffiles%2Fdbgroup.bib&amp;rft.date=2014&amp;rft.au=Zhen+Wang"></span>
+                           <a title="W14" href="http://cs.iit.edu/~dbgroup/php/bibtexbrowser.php?key=W14&amp;bib=..%2Ffiles%2Fdbgroup.bib">[bibtex]</a> <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/Z14.pdf">[pdf]</a></td>
+                       </tr>
+                       <tr><td><h4 style="background:yellow">2011</h4></td></tr>
+                       <tr>
+                        <td>[1]</td>
+                        <td>
+                           <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/GD11.pdf"><span>Debugging Data Exchange with Vagabond</span></a>
+                           <span class="bibauthor">(Boris Glavic, Jiang Du, Ren&eacute;e J. Miller, Gustavo Alonso, Laura M. Haas)</span>, <span>In Proceedings of the VLDB Endowment (PVLDB) (Demonstration Track)</span>, volume 4, 2011.
+                           <span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.atitle=Debugging+Data+Exchange+with+Vagabond&amp;rft.jtitle=Proceedings+of+the+VLDB+Endowment+%28PVLDB%29+%28Demonstration+Track%29&amp;rft.volume=4&amp;rft.issue=&amp;rft.pub=&amp;rft_id=http%3A%2F%2Fcs.iit.edu%2F%257edbgroup%2Fpdfpubls%2FGD11.pdf&amp;rfr_id=info%3Asid%2Fwww.cs.iit.edu%3A..%2Ffiles%2Fdbgroup.bib&amp;rft.date=2011&amp;rft.au=Boris+Glavic&amp;rft.au=Jiang+Du&amp;rft.au=Ren%26eacute%3Be+J.+Miller&amp;rft.au=Gustavo+Alonso&amp;rft.au=Laura+M.+Haas"></span>
+                           <a title="GD11" href="http://cs.iit.edu/~dbgroup/php/bibtexbrowser.php?key=GD11&amp;bib=..%2Ffiles%2Fdbgroup.bib">[bibtex]</a> <a href="http://cs.iit.edu/%7edbgroup/pdfpubls/GD11.pdf">[pdf]</a></td>
+                       </tr>
+                   </table>
+
+                   <h2>Funding</h2>
+                   <hr>
+               </div><!--/.col-xs-12.col-sm-9-->
+
+           </div><!--/row-->
+
+           <hr>
+
+           <footer>
+            <p>&copy; Company 2014</p>
+        </footer>
+
+    </div><!--/.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="offcanvas.js"></script>
+</body>
+</html>
